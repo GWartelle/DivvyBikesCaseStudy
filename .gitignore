@@ -1,0 +1,16 @@
+# .gitignore
+
+# Ignore les fichiers CSV dans le dossier Data/Study Data/
+Data/Study Data/202205-divvy-tripdata.csv
+Data/Study Data/202206-divvy-tripdata.csv
+Data/Study Data/202207-divvy-tripdata.csv
+Data/Study Data/202208-divvy-tripdata.csv
+Data/Study Data/202209-divvy-tripdata.csv
+Data/Study Data/202210-divvy-tripdata.csv
+Data/Study Data/202211-divvy-tripdata.csv
+Data/Study Data/202212-divvy-tripdata.csv
+Data/Study Data/202301-divvy-tripdata.csv
+Data/Study Data/202302-divvy-tripdata.csv
+Data/Study Data/202303-divvy-tripdata.csv
+Data/Study Data/202304-divvy-tripdata.csv
+.Rhistory
