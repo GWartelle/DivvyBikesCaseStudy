@@ -14,6 +14,10 @@ library(patchwork)
 library(RColorBrewer)
 library(tibble)
 
+# Setting the working directory
+setwd("")
+getwd()
+
 # Binding all 12 csv files into one
 trip_data <- list.files("./Data/Study Data", full.names = TRUE) %>% 
   lapply(read_csv) %>% 
@@ -257,13 +261,13 @@ head(processed_data, n=10)
 skim_without_charts(processed_data)
 
 # Saving the processed dataset as a RDS file
-saveRDS(processed_data, file = "Output/Data/processed_data.rds")
+saveRDS(processed_data, file = "./Output/Data/processed_data.rds")
 
 # Clearing the workspace
 rm(list = ls())
 
 # Loading the processed dataset
-processed_data <- readRDS(file = "Output/Data/processed_data.rds")
+processed_data <- readRDS(file = "./Output/Data/processed_data.rds")
 
 # Creating a theme for visualizations
 work_theme <- theme_bw() +
