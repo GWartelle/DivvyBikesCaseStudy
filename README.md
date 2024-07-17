@@ -152,10 +152,10 @@ I won't go over all of them, as they are presented in the `CompteRendu.md` file 
 The issue I had was that a quarter of the data I used was missing the station's name, either the one at the start of a trip or the end one, and even both for some trips.
 As I would have lost a lot of useful data, I decided to fix this.
 
-After a bit of investigation I found that this was caused by trips ended and/or started outside of a station, as users can use the integrated bike lock to secure their bike.
-By doing so, users trigger a start and/or end of trip event without regestering any station name.
+After a bit of investigation I found that this was caused by trips started and/or ended outside of a station, as users can use the integrated bike lock to secure their bike.
+By doing so, users trigger a start and/or end of trip event without registering any station name.
 
-To fix this I decided to change these missing values with the name of the closest station, and to do so I collected all the station names and their coordinates in my database :
+To fix this I decided to replace these missing values with the name of the closest station, and to do so I collected all the station names and their coordinates in my database :
 
 ```r
 true_stations <- cbind(station_id, station_name, station_lat, station_lng, station_location) %>%
