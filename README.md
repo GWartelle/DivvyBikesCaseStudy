@@ -42,7 +42,7 @@ If you want to take a direct look at this data analysis, you can do so by checki
 It is hosted on [RPubs](https://rpubs.com/), a service provided by RStudio, where users can publish their R Markdown documents online.
 
 This is a case study focusing on the DivvyBikes rental service.
-I conducted this analysis to apply the skills I acquired through the Google Data Analytics Certificate program hosted on [Coursera](https://www.coursera.org/professional-certificates/google-data-analytics).
+I conducted this analysis to apply the skills I acquired through the [Google Data Analytics Certificate](https://www.coursera.org/professional-certificates/google-data-analytics) program hosted on [Coursera](https://www.coursera.org/).
 The main objective of this study was to identify differences between members and casual users and propose strategies to boost subscription rates for Divvy services.
 
 The analysis was done using [R](https://www.r-project.org/), a statistical computing programming language.
