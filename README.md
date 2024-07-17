@@ -209,7 +209,7 @@ After this, the following line updates the names of the missing start stations w
 
 Then I just had to repeat this process with the missing end stations.
 
-Finally, the last thing to do was update the main dataset with these newly gained station names :
+Finally, the last thing to do was to update the main dataset with these newly gained station names :
 
 ```r
 filling_stations <- full_join(start_missing, end_missing, by = "ride_id") %>%
