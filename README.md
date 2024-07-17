@@ -122,7 +122,7 @@ getwd()
 In this part of the code, between the "" of `setwd("")`, you'll have to precise the exact directory in which you cloned the project, otherwise the code won't work.
 
 Once this is done you can start running the code of this script. I recommend doing it one chunk of code at a time to better understand the process of the analysis.
-Also, as this analysis is dealing with a massive amount of data, running the whole script in one go will be quite slow.
+Also, as this analysis is dealing with a massive amount of data, running the whole script in one go will be quite long.
 
 ![Divvy Bikes Rstudio Screenshot](./Assets/RStudio_screenshot.png)
 
