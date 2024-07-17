@@ -66,7 +66,7 @@ After this, you have this `README.md` file, a `.gitignore` file, a `.Rhistory` f
 The rest is organised in folders :
 
 - `Assets/` has the images used for this `README.md` file
-- `Data/` has the data used for this study in two folders. First in `Chicago Shapefile/` there is the data used for the heatmaps, and `Study Data/` is where the .csv files used for the study are supposed to go
+- `Data/` has the data used for this study in two folders. First in `Chicago Shapefile/` there is the shapefile used for the heatmaps, and `Study Data/` is where the .csv files used for the study are supposed to go
 - `Document/` has the presentation of the case study
 - `Output/` has the data created during this analysis, also in two different folders. In `Data/` there are the .rds file with the cleaned data, and the .csv files used to create the heatmaps using [Tableau](https://www.tableau.com/). And in `Maps/` there are the maps created for this study
 - The `rsconnect/` folder was created for uploading this analysis on [RPubs](https://rpubs.com/)
