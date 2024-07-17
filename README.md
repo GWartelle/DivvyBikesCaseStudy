@@ -184,7 +184,7 @@ end_missing <- clean_data %>%
   filter(is.na(end_missing_name))
 ```
 
-Once this was done, I could tackle the most interesting part : finding the closest stations :
+Once this was done, I could tackle the most interesting part, finding the closest stations :
 
 ```r
 start_coords <- as.matrix(start_missing[, c("start_lng", "start_lat")])
