@@ -25,11 +25,9 @@
     <li><a href="#folder-structure">Folder Structure</a></li>
     <li><a href="#cloning-the-project">Cloning the project</a></li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#modifications">Modifications</a></li>
-    <li><a href="#improvements">Improvements</a></li>
+    <li><a href="#challenges">Challenges</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
-    <li><a href="#license">License</a></li>
   </ol>
 </details>
 
@@ -103,273 +101,142 @@ If you want to clone this project you just need [Git](https://git-scm.com/downlo
 Once the project is cloned, if you want to replicate this analysis, the first thing you have to do is to download the .csv files used for this study.
 You can do so right [here](https://divvy-tripdata.s3.amazonaws.com/index.html).
 
-This study was done using the data of a full year, so invite you to download the twelve latest .csv files, as they are organised by month. 
+This study was done using the data of a full year, so invite you to download the twelve latest .csv files, as they are organised by month.
 
 ![Divvy Bikes Data Screenshot](./Assets/divvy_data.png)
 
 Once you downloaded the necessary files, you must put them in the `Data/Study Data/` folder, otherwise the script won't work correctly.
 
-And when this is done, you only have to open the `DivvyBikesDataAnalysis.R` script in your editor and run it.
+And when this is done, the next thing to do is to open the `DivvyBikesDataAnalysis.R` script in your editor.
 
 Normally this should work on any modern IDE, but I would recommend using either [RStudio](https://posit.co/) (now called posit), or [Jupyter](https://jupyter.org/), as these will allow you to easily run the script one chunk of code at a time.
 
-![Sociopedia Home Page Screenshot](./public/assets/home_screen.png)
+In the script there is also somethinh you'll have to set up :
 
-Once logged in, you'll land on the home page.
-To make things clear, this web app has a lot of mockup features.
-This is intentional as this leaves the opportunity to implement a lot of new things once the tutorial is finished.
+```r
+# Setting the working directory
+setwd("")
+getwd()
+```
 
-So, now that this is out of the way, let's dive into this home page.
-At the top of the screen we have the navigation bar, with a search bar on the left.
-This is the first mockup feature, as you can enter some text into the search bar, but clicking the search icon won't do anything.
-This would be the opportunity to implement a profile searching feature.
+In this part of the code, between the "" of `setwd("")`, you'll have to precise the exact directory in which you cloned the project, otherwise the code won't work.
 
-On the right side we have the name of the user in a select menu, with the options of logging out and deleting the account.
-Besides that, the message, notification, and help icons are also mockup features, open for implementation.
-But the sun icon does work, as it toggles the dark mode on.
+Once this is done you can start running the code of this script. I recommend doing it one chunk of code at a time to better understand the process of the analysis.
+Also, as this analysis is dealing with a massive amount of data, running the whole script in one go will be quite slow.
 
-![Sociopedia Dark Mode Screenshot](./public/assets/dark_screen.png)
+![Divvy Bikes Rstudio Screenshot](./Assets/RStudio_screenshot.png)
 
-On the main page we found mutiple panels.
-On the left, there is the `User` panel, with all your info.
-Here there are some mockup features too: the account parameters icon and the social profiles are here for demonstration sake.
-And the views and impressions numbers are randomly generated at the creation of your profile.
+By following the script, you'll eventually go through all the analysis performed on this study's data.
 
-In the center of the screen, we find the feed, with the `MyPost` panel at the top.
-This panel allows you to enter a message to post on the feed for all the other users to see.
-You also have the possibility to send an image along with your message, by cliking on the image option, which pops off a dropzone where you can drag your image in.
-As for the other options (Clip, Attachment and Audio), those are mockup features as well.
+If you wish to present this analysis, you can incorporate it into a Notebook such as a [R Markdown Document](https://rmarkdown.rstudio.com/), or a [Jupyter Notebook](https://jupyter.org/).
 
-On the feed of Sociopedia, you can see all the other users' posts.
-On the top right of every posts (except yours), there is an add-friend icon which adds the creator of this post to your friend list.
-At the bottom of each post panel you have a heart icon for liking the post, and a comment icon for opening the comment section.
-For now you can only find mockup comments in this section, as the comment feature is not implemented yet.
+![Divvy Bikes Diagram Screenshot](./Assets/yearly_rides_diag.png)
 
-On the right of the screen there's an `Advertisement` panel, which is also a mockup feature.
-And finally under this panel, you have the `FriendList` panel, with all of your friends, with a remove-friend icon on their right if you want to remove them from the list.
+And if you're feeling extra-courageous you could even use the three .csv files created at the end of the script, and stored in the `Output/Data/` folder, to create heatmaps using [Tableau](https://www.tableau.com/) (or any other BI tool of your choice).
 
-Speaking of friends, if you click on a user's name, you are redirected to his/her profile page.
+Otherwise, feel free to use the heatmaps I created in the `Output/Maps/` folder.
 
-![Sociopedia Profile Page Screenshot](./public/assets/profile_screen.png)
+![Divvy Bikes Heatmaps Screenshot](./Assets/heat_map.png)
 
-On the top left of this page, you can find the `User` panel once again, but with the info of the user you cliked on this time.
-Under this panel, there is also the `FriendList` panel, but only with the friends of this user.
-
-On the center of the screen, there is also a feed, but this one only contains the posts of the user of this profile page.
-
-Lastly, if you want to get back to the home page, you can simply click on the `Sociopedia` logo in the top left of the screen. And if you want to log out (or delete your account), you can do so by clicking the select menu with your username in the top right of the screen.
+Lastly, if you end up with different graphs and results than me, it is absolutely normal as you will probably not use the same data as me, depending on the .csv files you choose to download from the [divvy-tripdata](https://divvy-tripdata.s3.amazonaws.com/index.html).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- MODIFICATIONS -->
+<!-- CHALLENGES -->
 
-<h2 id="modifications">Modifications</h2>
+<h2 id="challenges">Challenges</h2>
 
-Compared to the original project, I changed some things here and there: I added a delete user account feature, I removed the possibility to add yourself to your own friend list, I also removed the possibility to create a post from the profile page of a user, etc ...
+Of course, performing this analysis presented its share of challenges.
+I won't go over all of them, as they are presented in the `CompteRendu.md` file for the most part, but I would like to show you the most interesting part I had to deal with in this analysis.
 
-But one major thing I added to this project is the storage of uploaded images in an AWS S3 bucket, instead of storing them directly on the server. I decided to implement this feature because I deployed this project on Render, and the ability to store files on it is rather limited, as its file system is ephemeral.
+The issue I had was that a quarter of the data I used was missing the name of the station of bike trips.
+As I would have lost a lot of useful data, I decided to fix this.
 
-So I wanted to share with you how I managed to implement this cloud storage.
-Of course the first part was to create an AWS account, create a new S3 bucket, and put all its credentials in my .env file.
+After a bit of investigation I found that this was caused by trips ended and/or started outside of a station, as users can use the integrated bike lock to secure their bike.
+By doing so, users trigger a start and/or end of trip event without regestering any station name.
 
-Once this was done, it was time to set this up on my server :
+To fix this I decided to change these missing values with the name of the closest station, and to do so I collected all the station names and their coordinates in my database :
 
-```js
-/* AWS SDK SET UP */
-const s3 = new S3Client({
-  region: process.env.AWS_REGION,
-  credentials: {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-  },
-});
-
-/* FILE STORAGE */
-const upload = multer({
-  storage: multerS3({
-    s3: s3,
-    bucket: process.env.AWS_BUCKET_NAME,
-    contentType: multerS3.AUTO_CONTENT_TYPE,
-    key: function (req, file, cb) {
-      const filename = file.originalname
-        .replace(/\s+/g, "-")
-        .replace(/[^\w.-]+/g, "");
-      cb(null, Date.now().toString() + "-" + filename);
-    },
-  }),
-});
-
-/* ROUTES WITH FILES */
-app.post("/auth/register", upload.single("picture"), register);
-app.post("/posts", verifyToken, upload.single("picture"), createPost);
+```r
+true_stations <- cbind(station_id, station_name, station_lat, station_lng, station_location) %>%
+  count(station_id, station_name, station_lat, station_lng, station_location) %>%
+  na.omit() %>%
+  group_by(station_id) %>%
+  slice_max(order_by = n, n = 1, with_ties = FALSE) %>%
+  group_by(station_name) %>%
+  slice_max(order_by = n, n = 1, with_ties = FALSE) %>%
+  select(-n)
 ```
 
-The first thing to do was to create a S3Client, using the credentials of the bucket.
+Here I assigned the id, name, latitude, longitude and combined coordinates to a new `true_stations` variable, and then grouped the whole set by station name, only keeping the most frequent coordinates for each station (there were slight variations).
 
-Next it was time to create the function `upload` for uploading files in the bucket.
-Multer, as this is the tool used for uploads in this project, uses the S3Client I just set up `s3`, and connects with my bucket using the `AWS_BUCKET_NAME` stored in my .env file.
+Next, I created subsets of data with only the rows with missing data :
 
-And then Multer creates a `key` to identify the uploaded file, by combining the current date in Unix time with the name of the file without spaces or special characters.
+```r
+start_missing <- clean_data %>%
+  select(ride_id, start_station_name, start_lng, start_lat) %>%
+  rename(start_missing_name = start_station_name) %>%
+  filter(is.na(start_missing_name))
 
-This function is then called as a middleware in the `register` and `posts` routes, before the `register` and `createPost` controllers as they are the only ones with the image upload feature.
-
-Talking about these controllers, here is how they look like :
-
-```js
-/* REGISTER USER */
-export const register = async (req, res) => {
-  try {
-    /* ... */
-    const picturePath = req.file.location;
-
-    const newUser = new User({
-      /* ... */
-      picturePath,
-      /* ... */
-    });
-    const savedUser = await newUser.save();
-    res.status(201).json(savedUser);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-};
-
-/* CREATE POST */
-export const createPost = async (req, res) => {
-  try {
-    /* ... */
-    let picturePath;
-
-    if (req.file) {
-      picturePath = req.file.location;
-    }
-
-    const newPost = new Post({
-      /* ... */
-      picturePath,
-      /* ... */
-    });
-    await newPost.save();
-
-    const post = await Post.find();
-    res.status(201).json(post);
-  } catch (err) {
-    res.status(409).json({ message: err.message });
-  }
-};
+end_missing <- clean_data %>%
+  select(ride_id, end_station_name, end_lng, end_lat) %>%
+  rename(end_missing_name = end_station_name) %>%
+  filter(is.na(end_missing_name))
 ```
 
-To simplify things here, I just kept the `picturePath` field in these MongoDB documents.
+Once this was done, I could tackle the most interesting part : finding the closest stations :
 
-As you can see, the `register` and `createPost` controllers are both getting the image URL with `req.file.location`, which is then stored in the database.
+```r
+start_coords <- as.matrix(start_missing[, c("start_lng", "start_lat")])
+end_coords <- as.matrix(end_missing[, c("end_lng", "end_lat")])
+true_coords <- as.matrix(true_stations[, c("station_lng", "station_lat")])
 
-But aside from storing uploaded images in this S3 bucket, I also had to implement how to delete them from the bucket if the user deletes his/her account.
+start_neighbors <- RANN::nn2(true_coords, start_coords, k = 1)$nn.idx
+start_nearest_stations <- true_stations$station_name[start_neighbors]
+start_missing$start_missing_name <- start_nearest_stations
 
-```js
-const s3 = new S3Client({
-  region: process.env.AWS_REGION,
-  credentials: {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-  },
-});
-
-function getKeyFromUrl(url) {
-  const index = url.lastIndexOf("/");
-  return url.substring(index + 1);
-}
-
-async function deleteImageFromS3(imageUrl) {
-  try {
-    const imageKey = getKeyFromUrl(imageUrl);
-
-    const deleteParams = {
-      Bucket: process.env.AWS_BUCKET_NAME,
-      Key: imageKey,
-    };
-
-    const deleteCommand = new DeleteObjectCommand(deleteParams);
-    await s3.send(deleteCommand);
-
-    console.log(`Image with key ${imageKey} deleted from S3 bucket.`);
-  } catch (err) {
-    console.error(`Error deleting image with key ${imageKey}: ${err.message}`);
-  }
-}
+end_neighbors <- RANN::nn2(true_coords, end_coords, k = 1)$nn.idx
+end_nearest_stations <- true_stations$station_name[end_neighbors]
+end_missing$end_missing_name <- end_nearest_stations
 ```
 
-First I had to set a new S3Client, because this is in another file, as implementing this function directly in the main file of the server would have been too cumbersome.
+Here, after collecting the coordinates of the missing the stations, and the ones from all the stations combined, the only thing left to do was to compare them.
 
-Next I created a `getKeyFromUrl` function that extracts the key of an image to delete based on its URL by removing everything before the last `/`.
+In `start_neighbors <- RANN::nn2(true_coords, start_coords, k = 1)$nn.idx`, the `RANN::nn2` function compares the two matrices, and find the index of the nearest point in space (aka coordinates) in `true_coords` for each point in `start_coords`, and stores them all in `start_neighbors`.
 
-Then comes the `deleteImageFromS3` function which takes the URL of an image, extracts its key using `getKeyFromUrl`, sets up the parameters of the deletion with the name of the bucket and the key of the image, and then sends a `DeleteObjectCommand` with these parameters.
+Using the indeces stored in `start_neighbors`, the next line of code assigns the corresping station names in `true_stations` to a new variable, `start_nearest_stations`.
+After this, the following line updates the names of the missing stations with those stored in `start_nearest_stations`.
 
-The last thing to do is to use this `deleteImageFromS3` function in the `deleteUser` controller:
+Then I just had to repeat this process with the missing end stations.
 
-```js
-/* DELETE USER */
-export const deleteUser = async (req, res) => {
-  try {
-    const userId = req.params.userId;
+Finally, the last thing to do was update the main dataset with these newly gained station names :
 
-    // Find the user in the database and get their profile picture URL
-    const user = await User.findById(userId);
-    const profilePictureUrl = user.picturePath;
+```r
+filling_stations <- full_join(start_missing, end_missing, by = "ride_id") %>%
+  select(ride_id, start_missing_name, end_missing_name)
 
-    // Delete the user's profile picture from the bucket
-    await deleteImageFromS3(profilePictureUrl);
+clean_data <- clean_data %>%
+  left_join(filling_stations, by = "ride_id")
 
-    // Get the user's posts and their image URLs
-    const posts = await Post.find({ userId });
-    const imageUrls = posts.map((post) => post.picturePath);
+clean_data$start_station_name <- ifelse(is.na(clean_data$start_station_name),
+                                        clean_data$start_missing_name,
+                                        clean_data$start_station_name)
 
-    // Delete the posts images from the bucket
-    for (const imageUrl of imageUrls) {
-      if (imageUrl) {
-        await deleteImageFromS3(imageUrl);
-      }
-    }
+clean_data$end_station_name <- ifelse(is.na(clean_data$end_station_name),
+                                      clean_data$end_missing_name,
+                                      clean_data$end_station_name)
 
-    // Delete the user's posts
-    await Post.deleteMany({ userId });
-
-    // Delete the user from other users' friend list
-    await User.updateMany({}, { $pull: { friends: userId } }, { multi: true });
-
-    // Delete the user from the database
-    await User.findByIdAndDelete(userId);
-
-    res.status(200).json({ msg: "User deleted successfully." });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-};
+clean_data <- clean_data %>%
+  select(-start_missing_name, -end_missing_name)
 ```
 
-After getting the `userId` from the request, this controller first finds the user in the database, gets the URL of his/her profile picture and then deletes it with `deleteImageFromS3`.
+Here, after combining the updated `start_missing` and `end_missing` datasets into a new `filling_stations` dataset, I joined it to the main dataset based on the `ride_id`.
 
-The next thing to do is to get all the posts this user made, and then map the image's URL of each of these posts to an `imageUrls` variable.
-After this, the controller loops over each `imageUrl` in `imageUrls` and deletes it from the bucket if it exists (as it is possible to create a post without an image), using `deleteImageFromS3` once again.
+Then, I simply changed the start station names with the ones from the `filling_stations` if the original one was `NA`, and kept the original if not.
 
-Finally, the controller just needs to update the MongoDB database by deleting all the posts of the user, removing him/her from the friend list of all the other users, and then deleting his/her profile.
+After repeating this for the end station names, the only thing left to do was to get rid of the joined columns from `filling_stations`, to clean up the original dataset.
 
-And this is how I implemented an AWS cloud storage for my web app !
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<h2 id="improvements">Improvements</h2>
-
-As mentioned multiple times in the [usage](#usage) section, this project leaves room for a lot of features to be built.
-Therefore, if I had more time on my hands to improve this web app, here are the features I would implement :
-
-1. I'd start by implementing a password confirmation to the register page, and I'd also add a password retrieval feature, as these are staples of all modern apps.
-2. Really implementing the commenting feature is a must have. Being able to comment other users' posts is a crucial part of every other social medias.
-3. Then, I would upgrade the friend list feature. Instead of being able to add anyone as a friend, the user should first have to send a friend request.
-4. Even if it'd represent a lot of work, it would be great to implement the instant messaging system. Based on the improved friend list, users could send private messages to their friends.
-5. With the comments properly implemented, the improved friend list, and the private messages, a nice feature to complement all of this would be notifications. Users could know when one of their friends creates a new post, when someone comments one of their own posts and when they receive a new message.
-6. Finally, even if uploading images could be enough, it'd be nice to also have videos and audios uploads for posts.
-
-After that, this project could benefit from a lot of other changes like being able to update the user account, having real counts of views and impressions, adding the date and time to posts, really implementing the search bar, having the option for users to change/delete their posts, or being able to create an account using google, apple or other credentials, but I think this should be enough to begin with.
+And with this, I basically saved a quarter of my dataset !
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -389,22 +256,13 @@ And if you'd like to get in touch with me, feel free to reach out on [LinkedIn](
 
 <h2 id="acknowledgments">Acknowledgments</h2>
 
-As mentionned above, this project was made following this [tutorial](https://www.youtube.com/watch?v=K8YELRmUb5o).
-So I would like to thank its creator for his amazing work.
-If you want to go check the github of his tutorial you can do so right [here](https://github.com/ed-roh/mern-social-media).
-Feel free to give him a star, as his work was well structured and his explanations clear and useful.
+As mentionned above, this data analysis was done as part of Google's [Data Analytics Certificate Cursus](https://www.coursera.org/professional-certificates/google-data-analytics).
+
+So I would like to thank [Google](https://www.coursera.org/instructor/google-career-certificates) for creating such an impressive course, and also [Coursera](https://www.coursera.org/) for providing such an amazing content to the world.
 
 And of course I would like to thank you for taking the time to read through all this !
 I wish you the best 😁
 
 Have a great day 😉
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
-
-<h2 id="license">License</h2>
-
-Distributed under the MIT License. See [opensource.org](https://opensource.org/license/mit) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
