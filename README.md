@@ -107,7 +107,7 @@ This study was done using the data of a full year, so invite you to download the
 
 Once you downloaded the necessary files, you must put them in the `Data/Study Data/` folder, otherwise the script won't work correctly.
 
-And when this is done, the next thing to do is to open the `DivvyBikesDataAnalysis.R` script in your editor.
+And when this is done, the next thing to do is to open the `DivvyBikesDataAnalysis.R` script (in the `Script/` folder) in your editor.
 
 Normally this should work on any modern IDE, but I would recommend using either [RStudio](https://posit.co/) (now called posit), or [Jupyter](https://jupyter.org/), as these will allow you to easily run the script one chunk of code at a time.
 
