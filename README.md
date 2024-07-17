@@ -258,7 +258,7 @@ And if you'd like to get in touch with me, feel free to reach out on [LinkedIn](
 
 As mentionned above, this data analysis was done as part of Google's [Data Analytics Certificate Cursus](https://www.coursera.org/professional-certificates/google-data-analytics).
 
-So I would like to thank [Google](https://www.coursera.org/instructor/google-career-certificates) for creating such an impressive course, and also [Coursera](https://www.coursera.org/) for providing such an amazing content to the world.
+So I would like to thank [Google](https://www.coursera.org/instructor/google-career-certificates) for creating such an impressive course, and also [Coursera](https://www.coursera.org/) for providing so much amazing content to the world.
 
 And of course I would like to thank you for taking the time to read through all this !
 I wish you the best 😁
