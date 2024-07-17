@@ -149,7 +149,7 @@ Lastly, if you end up with different graphs and results than me, it is absolutel
 Of course, performing this analysis presented its share of challenges.
 I won't go over all of them, as they are presented in the `CompteRendu.md` file for the most part, but I would like to show you the most interesting part I had to deal with in this analysis.
 
-The issue I had was that a quarter of the data I used was missing the name of the station of bike trips.
+The issue I had was that a quarter of the data I used was missing the station's name, either the one at the start of a trip or the end one, and even both for some trips.
 As I would have lost a lot of useful data, I decided to fix this.
 
 After a bit of investigation I found that this was caused by trips ended and/or started outside of a station, as users can use the integrated bike lock to secure their bike.
