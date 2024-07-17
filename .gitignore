@@ -1,6 +1,6 @@
 # .gitignore
 
 # Ignore les fichiers CSV dans le dossier Data/Study Data/
-Data/Study Data/
+Data/Study Data/**
 
 .Rhistory
