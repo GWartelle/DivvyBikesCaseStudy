@@ -200,7 +200,7 @@ end_nearest_stations <- true_stations$station_name[end_neighbors]
 end_missing$end_missing_name <- end_nearest_stations
 ```
 
-Here, after collecting the coordinates of the missing the stations, and the ones from all the stations combined, the only thing left to do was to compare them.
+Here, after collecting the coordinates of the missing stations, and the ones from all the stations combined, the only thing left to do was to compare them.
 
 In `start_neighbors <- RANN::nn2(true_coords, start_coords, k = 1)$nn.idx`, the `RANN::nn2` function compares the two matrices, and find the index of the nearest point in space (aka coordinates) in `true_coords` for each point in `start_coords`, and stores them all in `start_neighbors`.
 
