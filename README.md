@@ -70,7 +70,7 @@ The rest is organised in folders :
 - `Document/` has the presentation of the case study
 - `Output/` has the data created during this analysis, also in two different folders. In `Data/` there are the .rds file with the cleaned data, and the .csv files used to create the heatmaps using [Tableau](https://www.tableau.com/). And in `Maps/` there are the maps created for this study
 - The `rsconnect/` folder was created for uploading this analysis on [RPubs](https://rpubs.com/)
-- And the `Script/` has the main [R](https://www.r-project.org/) script used to perform the analysis
+- And the `Script/` folder has the main [R](https://www.r-project.org/) script used to perform the analysis
 
 That's it for the folder structure !
 
