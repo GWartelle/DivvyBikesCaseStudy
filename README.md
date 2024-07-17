@@ -204,8 +204,8 @@ Here, after collecting the coordinates of the missing stations, and the ones fro
 
 In `start_neighbors <- RANN::nn2(true_coords, start_coords, k = 1)$nn.idx`, the `RANN::nn2` function compares the two matrices, and find the index of the nearest point in space (aka coordinates) in `true_coords` for each point in `start_coords`, and stores them all in `start_neighbors`.
 
-Using the indeces stored in `start_neighbors`, the next line of code assigns the corresping station names in `true_stations` to a new variable, `start_nearest_stations`.
-After this, the following line updates the names of the missing stations with those stored in `start_nearest_stations`.
+Using the indeces stored in `start_neighbors`, the next line of code assigns the corresponding station names in `true_stations` to a new variable, `start_nearest_stations`.
+After this, the following line updates the names of the missing start stations with those stored in `start_nearest_stations`.
 
 Then I just had to repeat this process with the missing end stations.
 
