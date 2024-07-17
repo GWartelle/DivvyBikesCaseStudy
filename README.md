@@ -47,7 +47,7 @@ The main objective of this study was to identify differences between members and
 
 The analysis was done using [R](https://www.r-project.org/), a statistical computing programming language.
 The main library used to make this analysis is [Tidyverse](https://www.tidyverse.org/), as this library has all the essential tools for data science.
-The other libraries used for this project are [skimr](https://cran.r-project.org/web/packages/skimr/vignettes/skimr.html) for summarizing data, [RANN](https://cran.r-project.org/web/packages/RANN/index.html) used for fiding the closest station to a user, [patchwork](https://cran.r-project.org/web/packages/patchwork/index.html) for organizing some plots, [RColorBrewer](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) for different color palettes for plots, and [tibble](https://cran.r-project.org/web/packages/tibble/index.html) for data frames.
+The other libraries used for this project are [skimr](https://cran.r-project.org/web/packages/skimr/vignettes/skimr.html) for summarizing data, [RANN](https://cran.r-project.org/web/packages/RANN/index.html) used for fiding the closest station to a user, [patchwork](https://cran.r-project.org/web/packages/patchwork/index.html) for organizing some plots, [RColorBrewer](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) for different color palettes, and [tibble](https://cran.r-project.org/web/packages/tibble/index.html) for data frames.
 
 Aside from a programming language, I used two other tools for this study.
 The first one I used is [Google My Maps](https://www.google.com/maps/d/?hl=en) to create a map of the users' favorite stations.
