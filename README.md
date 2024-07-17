@@ -168,7 +168,7 @@ true_stations <- cbind(station_id, station_name, station_lat, station_lng, stati
   select(-n)
 ```
 
-Here I assigned the id, name, latitude, longitude and combined coordinates to a new `true_stations` dataset, and then grouped the whole set by station name, only keeping the most frequent coordinates for each station (there were slight variations).
+Here I assigned the id, name, latitude, longitude and combined coordinates to a new `true_stations` dataset, and then grouped the whole set by station name, only keeping the most frequent coordinates for each station (there were slight variations of coordinates for a given station).
 
 Next, I created subsets of data with only the rows with missing data :
 
