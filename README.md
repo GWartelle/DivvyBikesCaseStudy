@@ -10,7 +10,7 @@
 <!-- PROJECT TITLE -->
 
 <div align="center">
-  <a href="https://rpubs.com/G_Wartelle/divvy-bikes-case-study">
+  <a href="https://rpubs.com/G_Wartelle/divvy-bikes-case-study" target="_blank" rel="noopener noreferrer">
     <img src="./Assets/bars-graph-svgrepo-com.svg" alt="Data Analysis Logo"  height="70">
   </a>
 </div>
